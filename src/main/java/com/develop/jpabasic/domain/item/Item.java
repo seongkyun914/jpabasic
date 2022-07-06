@@ -20,10 +20,21 @@ public abstract class Item {
 
     private String name;
     private int price;
-    private int StockQuantity;
+    private int stockQuantity;
 
     @ManyToMany(mappedBy = "items")
     private List<Category> categories = new ArrayList<>();
+
+    /**
+     *
+     */
+    public void addStock(int quantity){
+
+    }
+
+    public void removeStock(int quantity){
+        int restStock = this.stockQuantity -quantity;
+    }
 
 
 
