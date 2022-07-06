@@ -1,6 +1,7 @@
 package com.develop.jpabasic.domain.item;
 
 import com.develop.jpabasic.domain.Category;
+import com.develop.jpabasic.exception.NotEnoughStockException;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -26,14 +27,22 @@ public abstract class Item {
     private List<Category> categories = new ArrayList<>();
 
     /**
-     *
+     * stock 증가
      */
     public void addStock(int quantity){
-
+        this.stockQuantity += quantity;
     }
 
+    /**
+     *
+     * @param quantity
+     */
     public void removeStock(int quantity){
         int restStock = this.stockQuantity - quantity;
+        if(restStock<0){
+            throw new NotEnoughStockException("need more stock");
+        }
+        this.stockQuantity = restStock;
     }
 
 
