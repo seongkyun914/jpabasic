@@ -1,16 +1,16 @@
 package com.develop.jpabasic.service;
 
-import com.develop.jpabasic.domain.Delivery;
-import com.develop.jpabasic.domain.Member;
-import com.develop.jpabasic.domain.Order;
-import com.develop.jpabasic.domain.OrderItem;
+import com.develop.jpabasic.domain.*;
 import com.develop.jpabasic.domain.item.Item;
 import com.develop.jpabasic.repository.ItemRepository;
 import com.develop.jpabasic.repository.MemberRepository;
 import com.develop.jpabasic.repository.OrderRepository;
+import com.develop.jpabasic.repository.OrderSearch;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 @Transactional(readOnly = true)
@@ -56,9 +56,9 @@ public class OrderService {
         order.cancel();
     }
     //검색
-    /*
+
     public List<Order> findOrders(OrderSearch orderSearch){
-        return orderRepository.findAll();
+        return orderRepository.findAllByString(orderSearch);
     }
-*/
+
 }
