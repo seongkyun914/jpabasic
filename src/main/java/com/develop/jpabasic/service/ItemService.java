@@ -27,7 +27,7 @@ public class ItemService {
 
     }
 
-    public List<Item> findAll(){
+    public List<Item> findItems(){
         return itemRepository.findAll();
     }
 }

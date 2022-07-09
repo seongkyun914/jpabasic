@@ -1,0 +1,4 @@
+ctrl + 'E' 최근 파일
+ctrl + shift + 'A'  action
+ctrl + alt + 'V'
+ctrl + shift + 'T'   test 만들기
