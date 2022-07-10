@@ -44,4 +44,7 @@ public class MemberService {
         return memberRepository.findOne(memberId);
     }
 
+    public List<Member> findMembers() {
+        return memberRepository.findAll();
+    }
 }

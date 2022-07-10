@@ -43,12 +43,11 @@ public class MemberController {
 
     }
 
-
+    //MEMBER LIST 조차도 DTO 사용이 좋다
     @GetMapping("/members")
     public String list(Model model){
         List<Member> members = memberService.findMemers();
         model.addAttribute("members",members);
         return "members/memberList";
-
     }
 }
