@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Getter @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class OrderItem {
-    @Id
+    @Id @GeneratedValue
     @Column(name = "order_item_id")
     private Long id;
 

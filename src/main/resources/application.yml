@@ -1,14 +1,14 @@
 spring:
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: create-drop
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true
     format_sql: true
   datasource:
-    #url: jdbc:h2:tcp://localhost/~/jpatest
-    url: jdbc:h2:mem:~/jpatest
+    url: jdbc:h2:tcp://localhost/~/jpatest
+    #url: jdbc:h2:mem:~/jpatest
     username: sa
     password:
     dirver-class-name: org.h2.Driver
